@@ -28,7 +28,7 @@ public class QuizzerProject{
 									System.out.println("Wrong. The correct answer was " + ans);
 								}	
 						}
-					else if((i + 1) == ques)
+					else if((i + 1) == j)
 						{
 							int ans = y % x;
 							System.out.print(y + " % " + x + " = ");
