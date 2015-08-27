@@ -13,51 +13,34 @@ public class QuizzerProject{
 				{
 					int x = ((int)(Math.random() * 60));
 					int y = ((int)(Math.random() * 30) + 1);
+					int ans, guess;
 					if(i == j)
 						{
-							int ans = x % x;
+							ans = x % x;
 							System.out.print(x + " % " + x + " = ");
-							int guess = userInput.nextInt();
-							if(guess == ans)
-								{
-									System.out.println("Correct.");
-									counter++;
-								}
-							else
-								{
-									System.out.println("Wrong. The correct answer was " + ans);
-								}	
+							guess = userInput.nextInt();
 						}
 					else if((i + 1) == j)
 						{
-							int ans = y % x;
+							ans = y % x;
 							System.out.print(y + " % " + x + " = ");
-							int guess = userInput.nextInt();
-							if(guess == ans)
-								{
-									System.out.println("Correct.");
-									counter++;
-								}	
-							else
-								{
-									System.out.println("Wrong. The correct answer was " + ans);
-								}
+							guess = userInput.nextInt();
 						}
 					else
 						{
-							int ans = x % y;
+							ans = x % y;
 							System.out.print(x + " % " + y + " = ");
-							int guess = userInput.nextInt();
-							if(guess == ans)
-								{
-									System.out.println("Correct.");
-									counter++;
-								}	
-							else
-								{
-									System.out.println("Wrong. The correct answer was " + ans);
-								}
+							guess = userInput.nextInt();
 						}
+					if(guess == ans)
+						{
+							System.out.println("Correct.");
+							counter++;
+						}
+					else
+						{
+							System.out.println("Wrong. The correct answer was " + ans);
+						}	
 				}
 			System.out.println("You got " + counter + " right answers out of " + ques + ".");
 		}
